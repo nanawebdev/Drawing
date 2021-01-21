@@ -1,0 +1,271 @@
+* {
+  box-sizing: border-box;
+}
+body {
+  padding: 0;
+  margin: 0;
+
+  background-color: #72d9ea;
+}
+
+/* header  */
+header {
+  display: flex;
+  justify-content: space-between;
+  padding:8px 16px;
+}
+.settings {
+  width: 52px;
+  height: 50px;
+
+  position: relative;
+
+  background-color: transparent;
+  border: none;
+  opacity: 1;
+
+  outline-style: none;
+
+  border-radius: 10%;
+}
+.burger-el {
+  position: absolute;
+  width: 40px;
+  height: 5px;
+
+  top: 22px;
+  left: 5px;
+
+  background-color: #ffff;
+  border-radius: 2px;
+
+  opacity: 0.8;
+}
+.burger-el::after {
+  position: absolute;
+  content: "";
+  width: 40px;
+  height: 5px;
+
+  top: 12px;
+  left: 0px;
+
+  background-color: #ffff;
+  border-radius: 2px;
+}
+.burger-el::before {
+  position: absolute;
+  content: "";
+  width: 40px;
+  height: 5px;
+
+  top: -12px;
+  left: 0px;
+
+  background-color: #ffff;
+  border-radius: 2px;
+}
+.window-current-color {
+  width: 52px;
+  height: 50px;
+  border:2px solid #ffff;
+
+  border-radius:10%;
+
+  box-shadow:0 0 5px 0 #5c858b;
+}
+
+/* Холст  */
+.canvas {
+  display: flex;
+  flex-wrap: wrap;
+
+  padding:0 8px;
+}
+.pixel {
+  background-color: #ffff;
+  border: 1px solid black;
+  width: 20px;
+  height: 20px;
+  margin: 0;
+  padding: 0;
+}
+
+/* Панель управления  */
+.control {
+  cursor:pointer;
+
+  margin: 0 3px;
+  padding: 0;
+  width: 50px;
+  height: 50px;
+
+  border-radius: 10%;
+  background-color: #ffff;
+  box-shadow: 0 0 10px 1px #5c858b;
+
+  border: none;
+  outline-style: none;
+}
+.control._active {
+  background-color: bisque;
+}
+.controls-wrapper {
+  padding-top:16px;
+  position:relative;
+  overflow-y: hidden;
+  height: 150px;
+}
+
+.panel-of-controls {
+  display: flex;
+  justify-content: center;
+
+  transition: 1s;
+}
+.eraser {
+  background-image: url(src/eraser.png);
+}
+
+.pencil {
+  background-image: url(src/pencil.png);
+}
+
+.pallete {
+  background-image: url(src/pallete2.png);
+}
+.hidden {
+  display: none;
+}
+.toLeft {
+  transform:translateX(-350px);
+}
+
+/* Выбор цвета  */
+.colors-wrapper {
+  overflow: hidden;
+  display: flex;
+  flex-direction: column;
+  width:100%;
+
+  position:absolute;
+  top:0px;
+  transform: translateY(-150px);
+
+  transition: 1s;
+}
+.colors-wrapper.toBottom {
+  transform: translateY(0);
+}
+
+.chosen-color {
+  display: flex;
+
+  height:80px;
+  overflow-x: scroll;
+  padding-top: 16px;
+}
+
+.color {
+  flex-shrink:0;
+  width: 50px;
+
+  height: 50px;
+
+  
+  border-radius: 10%;
+  margin-left:4px;
+
+  box-shadow:0 0 5px 0 #5c858b;
+}
+
+input[type="radio"] {
+  display:none;
+}
+
+/* paint color wrappers  */
+.black {
+  background-color: black;
+}
+.white {
+  background-color: white;
+}
+.grey {
+  background-color: grey;
+}
+.pink {
+  background-color: pink;
+}
+.red {
+  background-color: red;
+}
+.darkorange {
+  background-color: darkorange;
+}
+
+.saddlebrown {
+  background-color: saddlebrown;
+}
+
+.yellow {
+  background-color: yellow;
+}
+.greenyellow {
+  background-color: greenyellow;
+}
+.forestgreen {
+  background-color: forestgreen;
+}
+.aquamarine {
+  background-color: aquamarine;
+}
+.lightskyblue {
+  background-color: lightskyblue;
+}
+.lightsteelblue {
+  background-color: lightsteelblue;
+}
+.darkblue {
+  background-color: darkblue;
+}
+.indigo {
+  background-color: indigo;
+}
+.mediumpurple {
+  background-color: mediumpurple;
+}
+.purple {
+  background-color: purple;
+}
+
+/* Close pallete button  */
+.close-pallete {
+  position:relative;
+  width:50px;
+  height:50px;
+  background-color: #5c858b56;
+  outline-style: none;
+  border:none;
+  border-radius: 10%;
+  margin:8px auto;
+}
+.close-pallete::after {
+  position:absolute;
+  content:'';
+  top:23px;
+  left:5px;
+  width:40px;
+  height:5px;
+  background-color: white;
+  transform:rotate(45deg);
+}
+.close-pallete::before {
+  position:absolute;
+  content:'';
+  top:23px;
+  left:5px;
+  width:40px;
+  height:5px;
+  background-color: white;
+  transform:rotate(-45deg);
+}
