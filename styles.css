@@ -76,14 +76,26 @@ header {
 }
 
 /* Холст  */
+.pixels-wrapper {
+  display: flex;
+  flex-wrap: wrap;
+ 
+  padding:0 8px;
+  margin:0;
+  padding:0;
+  justify-content: center;
+
+  
+  background-color:#ffff;
+}
 .canvas {
   display: flex;
   flex-wrap: wrap;
-
   padding:0 8px;
+  justify-content: center;
 }
 .pixel {
-  background-color: #ffff;
+  background-color:inherit;
   border: 1px solid black;
   width: 20px;
   height: 20px;
@@ -132,13 +144,16 @@ header {
 }
 
 .pallete {
-  background-image: url(src/pallete2.png);
+  background-image: url(src/pallete.png);
+}
+.paint-basket {
+  background-image: url(src/paint-basket.png);
 }
 .hidden {
   display: none;
 }
 .toLeft {
-  transform:translateX(-350px);
+  transform:translateX(-1200px);
 }
 
 /* Выбор цвета  */

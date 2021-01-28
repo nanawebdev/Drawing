@@ -1,9 +1,13 @@
 const canvas = document.querySelector('.canvas')
 const windowCurrentColor = document.querySelector('.window-current-color')
 
+// костыль
+const pixelsWrapper = document.querySelector('.pixels-wrapper')
+
 const eraser = document.querySelector('.eraser')
 const pallete = document.querySelector('.pallete')
 const pencil = document.querySelector('.pencil')
+const paintBasket = document.querySelector('.paint-basket')
 
 const panelOfControls = document.querySelector('.panel-of-controls')
 const closePallete = document.querySelector('.close-pallete')
@@ -20,7 +24,8 @@ function drawCanvas() {
     let pixelElement = document.createElement('div')
     pixelElement.classList.add('pixel')
 
-    canvas.append(pixelElement)
+    // canvas.append(pixelElement)
+    pixelsWrapper.append(pixelElement)
   }
 }
 
@@ -55,12 +60,24 @@ eraser.onclick = function () {
   mode = 'eraser'
   pencil.classList.remove('_active')
   eraser.classList.add('_active')
+  paintBasket.classList.remove('_active')
 }
 
 pencil.onclick = function () {
   mode = 'pencil'
   pencil.classList.add('_active')
   eraser.classList.remove('_active')
+  paintBasket.classList.remove('_active')
+}
+
+paintBasket.onclick = function () {
+  
+  mode = "paint-basket"
+  
+  pencil.classList.remove('_active')
+  eraser.classList.remove('_active')
+  
+  paintBasket.classList.add('_active')
 }
 
 function showCurrentColor () {
@@ -83,11 +100,18 @@ function activatePixels() {
 
       if (mode === 'eraser') {
         pixels[i].style.backgroundColor = 'white'
-      } else {
+      } 
+      if (mode === 'pencil')  {
         pixels[i].style.backgroundColor = currentColor
+      }
+      if (mode ==="paint-basket") {
+        // canvas.style.backgroundColor = currentColor
+        pixelsWrapper.style.backgroundColor = currentColor
       }
     }
   }
+
+
 }
 
 startApplication()

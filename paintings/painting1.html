@@ -5,6 +5,7 @@
     <title>Пиксели</title>
     <meta charset="UTF-8">
     <link rel="stylesheet" href="styles.css">
+    <link rel="stylesheet" href="painting1.css">
     <meta name="viewport" content="width=device-width,initial-scale=1">
 </head>
 
@@ -18,19 +19,13 @@
     </header>
     <main>
         <section class="canvas">
-
-            <!-- костыль для заливки  -->
-            <div class="pixels-wrapper"></div>
-            
         </section>
 
         <section class="controls-wrapper">
         <div class="panel-of-controls">
             <button class="control eraser"></button>
             <button class="control pencil"></button>
-            <button class="control paint-basket"></button>
             <button class="control pallete"></button>
-            
         </div>
 
         <div class="colors-wrapper">
@@ -43,6 +38,10 @@
                 <input type="radio" id="darkorange" value="darkorange"></input>
                 <input type="radio" id="saddlebrown" value="saddlebrown"></input>
                 <input type="radio" id="yellow" value="yellow"></input>
+                <!-- специально для этой картинки  -->
+                <input type="radio" id="peachpuff" value="peachpuff"></input>
+                <input type="radio" id="darkkhaki" value="darkkhaki"></input>
+
                 <input type="radio" id="greenyellow" value="greenyellow"></input>
                 <input type="radio" id="forestgreen" value="forestgreen"></input>
                 <input type="radio" id="aquamarine" value="aquamarine"></input>
@@ -62,6 +61,12 @@
                 <label for="darkorange" class="color darkorange"></label>
                 <label for="saddlebrown" class="color saddlebrown"></label>
                 <label for="yellow" class="color yellow"></label>
+
+                      <!-- специально для этой картинки  -->
+                <label for="peachpuff" class="color peachpuff"></label>
+                <label for="darkkhaki" class="color darkkhaki"></label>
+
+
                 <label for="greenyellow" class="color greenyellow"></label>
                 <label for="forestgreen" class="color forestgreen"></label>
                 <label for="aquamarine" class="color aquamarine"></label>
@@ -84,7 +89,7 @@
 
     </footer>
 
-    <script src="script.js"></script>
+    <script src="script2.js"></script>
 
 </body>
 
