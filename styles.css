@@ -84,7 +84,8 @@ header {
   margin:0;
   padding:0;
   justify-content: center;
-
+  width:340px;
+ 
   
   background-color:#ffff;
 }
@@ -187,7 +188,6 @@ header {
 
   height: 50px;
 
-  
   border-radius: 10%;
   margin-left:4px;
 
@@ -256,13 +256,17 @@ input[type="radio"] {
 /* Close pallete button  */
 .close-pallete {
   position:relative;
+
   width:50px;
   height:50px;
+
   background-color: #5c858b56;
   outline-style: none;
   border:none;
   border-radius: 10%;
-  margin:8px auto;
+
+
+  margin:0 auto;
 }
 .close-pallete::after {
   position:absolute;

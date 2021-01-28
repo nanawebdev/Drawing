@@ -16,9 +16,14 @@ const colorLabels = document.querySelectorAll('.color')
 
 // рисует холст
 function drawCanvas() {
-  const canvasWidth = window.innerWidth - 16
+  const canvasWidth = window.innerWidth - 20
   const pixelsPerRow = Math.floor(canvasWidth / 20)
-  const pixelsPerCol = 25
+  
+
+  const canvasHeight = window.innerHeight - 200
+  const pixelsPerCol = Math.floor(canvasHeight / 20)
+  
+ 
 
   for (let i = 0; i < pixelsPerRow * pixelsPerCol; i++) {
     let pixelElement = document.createElement('div')
